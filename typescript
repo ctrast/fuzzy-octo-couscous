@@ -1,0 +1,65 @@
+Script started on Mon Jul 24 17:17:48 2017
+[?1034hbash-3.2$ ./gradlew clean build
+[0m[1m> Connecting to Daemon[22m[22D:clean[0K
+[1m> Building 8% > :compileJava[22m[28D:compileJava[0K
+/Users/z001n24/DEV/MSCValueStream/ATDDSeleniumRestAssured/src/main/java/utilities/UtilityHelper.java:99: error: cannot find symbol
+        waitForLoad();
+        ^
+  symbol:   method waitForLoad()
+  location: class UtilityHelper
+1 error
+:compileJava [33mFAILED[39m
+
+[31mFAILURE: [39m[31mBuild failed with an exception.[39m
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+[33m> [39mCompilation failed; see the compiler error output for details.
+
+* Try:
+Run with [1m--stacktrace[22m option to get the stack trace. Run with [1m--info[22m or [1m--debug[22m option to get more log output.
+
+[31mBUILD FAILED[39m
+
+Total time: 0.781 secs
+[0K[0mbash-3.2$ ./gradlew clean build
+[0m[1m> Connecting to Daemon[22m[22D:clean[0K
+[1m> Building 8% > :compileJava[22m[28D:compileJava[0K
+/Users/z001n24/DEV/MSCValueStream/ATDDSeleniumRestAssured/src/main/java/utilities/UtilityHelper.java:99: error: cannot find symbol
+        waitForLoad();
+        ^
+  symbol:   method waitForLoad()
+  location: class UtilityHelper
+1 error
+:compileJava [33mFAILED[39m
+
+[31mFAILURE: [39m[31mBuild failed with an exception.[39m
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+[33m> [39mCompilation failed; see the compiler error output for details.
+
+* Try:
+Run with [1m--stacktrace[22m option to get the stack trace. Run with [1m--info[22m or [1m--debug[22m option to get more log output.
+
+[31mBUILD FAILED[39m
+
+Total time: 0.784 secs
+[0K[0mbash-3.2$ ./gradlew clean build
+[0m[1m> Connecting to Daemon[22m[22D:clean[0K
+[1m> Building 8% > :compileJava[22m[28D:compileJava[0K
+:processResources [33mUP-TO-DATE[39m
+:classes
+:jar
+:assemble
+:compileTestJava
+:processTestResources
+:testClasses
+[1m> Building 75% > :test[22m[0K[22D:test[0K
+:check
+:build
+
+BUILD SUCCESSFUL
+
+Total time: 0.874 secs
+[0K[0mbash-3.2$ 
