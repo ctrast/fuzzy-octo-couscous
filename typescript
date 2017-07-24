@@ -63,4 +63,20 @@ BUILD SUCCESSFUL
 
 Total time: 0.874 secs
 [0K[0mbash-3.2$ ./gradlew clean build
-[0m
+[0m[1m> Connecting to Daemon[22m[22D:clean[0K
+[1m> Building 8% > :compileJava[22m[28D:compileJava[0K
+:processResources [33mUP-TO-DATE[39m
+:classes
+:jar
+:assemble
+:compileTestJava
+:processTestResources
+:testClasses
+:test
+:check
+:build
+
+BUILD SUCCESSFUL
+
+Total time: 0.863 secs
+[0K[0mbash-3.2$ 
