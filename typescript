@@ -62,4 +62,5 @@ Total time: 0.784 secs
 BUILD SUCCESSFUL
 
 Total time: 0.874 secs
-[0K[0mbash-3.2$ 
+[0K[0mbash-3.2$ ./gradlew clean build
+[0m
