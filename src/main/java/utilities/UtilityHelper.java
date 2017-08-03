@@ -5,7 +5,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -113,7 +112,7 @@ public class UtilityHelper {
 
             @Override
             public Boolean apply(WebDriver wd) {
-                // TODO Auto-generated method stub
+
                 return "complete".equals(((JavascriptExecutor) wd)
                         .executeScript("return document.readyState"));
             }

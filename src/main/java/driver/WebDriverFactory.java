@@ -3,9 +3,7 @@ package driver;
 import context.Context;
 import context.ContextUtil;
 import dto.Browser;
-import org.openqa.selenium.Platform;
-import org.openqa.selenium.UnexpectedAlertBehaviour;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -39,16 +37,17 @@ public class WebDriverFactory {
 
     private static final String IEDRIVER_PATH = "src/main/resources/drivers/internetexplorer/IEDriverServer.exe";
     private static final String CHROMEDRIVER_PATH = "src/main/resources/drivers/chrome/chromedriver";
-    private static final String REMOTE_CHROMEDRIVER_PATH = "/apps/pimautomation/pimautomation_v1/repo/pimautomation/src/main/resources/drivers/chrome/linux/chromedriver";
+    private static final String REMOTE_CHROMEDRIVER_PATH = "";
 
     public static void initialize(String gridHubUrl, Browser browser)
-            throws MalformedURLException {
+             {
 
         WebDriver webDriver = null;
         Context context = new Context();
         DesiredCapabilities capability = new DesiredCapabilities();
         String browserName = browser.getName();
         capability.setJavascriptEnabled(true);
+        gridHubUrl = null;
 
         if (gridHubUrl == null || gridHubUrl.length() == 0) {
             webDriver = getInstance(browser);
@@ -69,10 +68,14 @@ public class WebDriverFactory {
             capability = setVersionAndPlatform(capability,
                     browser.getVersion(), browser.getPlatform());
 
-            webDriver = new RemoteWebDriver(new URL(gridHubUrl), capability);
+            try {
+                webDriver = new RemoteWebDriver(new URL(gridHubUrl), capability);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
 
         }
-        webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+       // webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         context.setWebDriverInstance(webDriver);
         ContextUtil.set(context);
 
@@ -108,7 +111,8 @@ public class WebDriverFactory {
 
             setChromeDriver();
             webDriver = new ChromeDriver();
-            webDriver.manage().window().maximize();
+            webDriver.manage().window().setPosition(new Point(0, 0));
+            webDriver.manage().window().setSize(new Dimension(2000,1800));
 
         } else if (FIREFOX.equals(browserName)) {
 

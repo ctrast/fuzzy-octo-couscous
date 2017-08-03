@@ -1,3 +1,4 @@
+@CucumberOptions(features="src/test/resources")
 Feature: Google Search
   @smoke
   Scenario: Search for bears

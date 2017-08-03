@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 
 public class Navigate {
     public void Google(){
-        ContextUtil.get().getWebDriverInstance().navigate().to("www.google.com");
+        ContextUtil.get().getWebDriverInstance().navigate().to("http://www.google.com");
     }
     public void All(){
         ContextUtil.get().getWebDriverInstance().findElement(By.linkText("AllPage")).click();

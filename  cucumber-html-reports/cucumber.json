@@ -1,0 +1,93 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1532678276,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Search.beforeScenario()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Search for bears",
+        "description": "",
+        "id": "google-search;search-for-bears",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1653143773,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "The user is on the google search page",
+            "match": {
+              "location": "Search.theUserIsOnTheGoogleSearchPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 90692729,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user enters bears into the search edit",
+            "match": {
+              "location": "Search.theUserEntersBearsIntoTheSearchEdit()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2983865618,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user click the search google button",
+            "match": {
+              "location": "Search.theUserClickTheSearchGoogleButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 42234298,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "search results list bears",
+            "match": {
+              "location": "Search.searchResultsListBears()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@smoke"
+          }
+        ]
+      }
+    ],
+    "name": "Google Search",
+    "description": "",
+    "id": "google-search",
+    "keyword": "Feature",
+    "uri": "Search.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@CucumberOptions(features\u003d\"src/test/resources\")"
+      }
+    ]
+  }
+]
