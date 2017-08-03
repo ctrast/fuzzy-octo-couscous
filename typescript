@@ -1794,4 +1794,22 @@ Run with [1m--stacktrace[22m option to get the stack trace. Run with [1m--inf
 [31mBUILD FAILED[39m
 
 Total time: 2.518 secs
+[0K[0mbash-3.2$ ./gradlew clean build
+[0mStarting a Gradle Daemon (subsequent builds will be faster)
+[1m> Starting Daemon[22m[17D[1m> Starting Daemon > Connecting to Daemon[22m[40D[0K[1m> Loading[22m[9D[1m> Loading > settings[22m[20D[1m> Loading[22m[0K[9D[1m> Configuring[22m[13D[1m> Configuring > 0/1 projects[22m[28D[1m> Configuring > 0/1 projects > root project[22m[43D[1m> Configuring > 0/1 projects[22m[0K[28D[1m> Configuring > 1/1 projects[22m[28D:clean[0K
+[1m> Building 8% > :compileJava[22m[28D[1m> Building 8% > :compileJava > Resolving dependencies ':compileClasspath'[22m[73D[1m> Building 8% > :compileJava[22m[0K[28D:compileJava[0K
+[1m> Building 8%[22m[0K[13D[1m> Building 16% > :processResources[22m[34D:processResources[0K
+:classes
+[1m> Building 33% > :jar[22m[0K[21D:jar[0K
+[1m> Building 33%[22m[0K[14D:assemble[0K
+:compileTestJava
+[1m> Building 58% > :processTestResources[22m[38D:processTestResources[0K
+:testClasses
+[1m> Building 75% > :test > 0 tests completed[22m[42D[1m> Building 75% > :test > 1 test completed[22m[0K[41D[1m> Building 75% > :test > 2 tests completed[22m[42D[1m> Building 75% > :test > 3 tests completed[22m[42D[1m> Building 75% > :test > 5 tests completed[22m[42D[1m> Building 75% > :test[22m[0K[22D:test[0K
+:check
+:build
+
+BUILD SUCCESSFUL
+
+Total time: 11.225 secs
 [0K[0mbash-3.2$ 
