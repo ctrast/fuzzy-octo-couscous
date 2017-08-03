@@ -1812,4 +1812,21 @@ Total time: 2.518 secs
 BUILD SUCCESSFUL
 
 Total time: 11.225 secs
+[0K[0mbash-3.2$ ./gradlew clean build
+[0m[1m> Connecting to Daemon[22m[22D:clean[0K
+[1m> Building 8% > :compileJava > Resolving dependencies ':compileClasspath'[22m[73D[1m> Building 8% > :compileJava[22m[0K[28D:compileJava[0K
+:processResources
+:classes
+[1m> Building 33% > :jar[22m[0K[21D:jar[0K
+[1m> Building 33%[22m[0K[14D:assemble[0K
+:compileTestJava
+:processTestResources
+:testClasses
+[1m> Building 75% > :test > 0 tests completed[22m[42D[1m> Building 75% > :test > 1 test completed[22m[0K[41D[1m> Building 75% > :test > 2 tests completed[22m[42D[1m> Building 75% > :test > 3 tests completed[22m[42D[1m> Building 75% > :test > 5 tests completed[22m[42D[1m> Building 75% > :test[22m[0K[22D:test[0K
+:check
+:build
+
+BUILD SUCCESSFUL
+
+Total time: 8.636 secs
 [0K[0mbash-3.2$ 
