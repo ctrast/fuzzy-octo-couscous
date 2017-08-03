@@ -13,7 +13,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 1420406286,
+  "duration": 1265743361,
   "status": "passed"
 });
 formatter.scenario({
@@ -54,28 +54,28 @@ formatter.match({
   "location": "Search.theUserIsOnTheGoogleSearchPage()"
 });
 formatter.result({
-  "duration": 2193907931,
+  "duration": 1588407255,
   "status": "passed"
 });
 formatter.match({
   "location": "Search.theUserEntersBearsIntoTheSearchEdit()"
 });
 formatter.result({
-  "duration": 92201398,
+  "duration": 87667370,
   "status": "passed"
 });
 formatter.match({
   "location": "Search.theUserClickTheSearchGoogleButton()"
 });
 formatter.result({
-  "duration": 2064238709,
+  "duration": 3226254947,
   "status": "passed"
 });
 formatter.match({
   "location": "Search.searchResultsListBears()"
 });
 formatter.result({
-  "duration": 46236639,
+  "duration": 40946878,
   "status": "passed"
 });
 });
