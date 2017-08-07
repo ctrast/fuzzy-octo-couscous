@@ -1,5 +1,6 @@
-package StepDef;
+package Com;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
@@ -10,7 +11,8 @@ import org.junit.Assert;
 import searchApp.AllPage;
 import searchApp.Google;
 import searchApp.Navigate;
-import utilities.BeforeScn;
+import utilities.Action;
+import utilities.BeforeAfterScn;
 import utilities.UtilityHelper;
 
 
@@ -18,12 +20,16 @@ public class Search {
     Navigate navigate = new Navigate();
     Google google = new Google();
     AllPage allPage = new AllPage();
-    BeforeScn beforeScn = new BeforeScn();
+    BeforeAfterScn beforeAfterScn = new BeforeAfterScn();
 
 
     @Before()
     public void beforeScenario() {
-        beforeScn.init();
+        beforeAfterScn.before();
+    }
+    @After()
+    public void afterScenario(){
+        beforeAfterScn.after();
     }
 
     @Given("^The user is on the google search page$")
@@ -38,12 +44,6 @@ public class Search {
 
     }
 
-    @When("^the user click the search google button$")
-    public void theUserClickTheSearchGoogleButton() throws Throwable {
-        google.googSearch_btn_click();
-
-    }
-
     @Then("^search results list bears$")
     public void searchResultsListBears() throws Throwable {
         Boolean value = UtilityHelper.divcontainsText("www.chicagobears.com");
@@ -51,5 +51,21 @@ public class Search {
 
     }
 
+    @When("^the user presses Enter button$")
+    public void theUserPressesEnterButton() throws Throwable {
+       Action.edt_sendKeysEnter();
+    }
+
+
+    @And("^the user enters the searchvalue (.*) into the search edit$")
+    public void theUserEntersTheSearchvalueSearchvalueIntoTheSearchEdit(String searchValue) throws Throwable {
+        google.googSearch_edt_sendKeys(searchValue);
+    }
+
+    @Then("^search results list the (.*)$")
+    public void searchResultsListTheSearchresults(String searchResults) throws Throwable {
+        Boolean value = UtilityHelper.divcontainsText(searchResults);
+        Assert.assertEquals("true", value.toString());
+    }
 }
 

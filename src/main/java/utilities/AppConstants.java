@@ -2,6 +2,7 @@ package utilities;
 
 public interface AppConstants {
 
+    static final String GOOGLEHOME="http://www.google.com";
     static final String TEST_ENVIRONMENT="test.environment";
     static final String TESTCASE_EXCEL_PATH="testcase.path";
     static final String IMAGE_PATH="image.path";

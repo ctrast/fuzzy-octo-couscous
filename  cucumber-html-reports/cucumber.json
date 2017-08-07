@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 1265743361,
+              "duration": 2044522046,
               "status": "passed"
             },
             "match": {
@@ -14,19 +14,30 @@
             }
           }
         ],
-        "line": 4,
-        "name": "Search for bears",
+        "line": 19,
+        "name": "Search for values",
         "description": "",
-        "id": "google-search;search-for-bears",
+        "id": "google-search;search-for-values;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 148002081,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Search.afterScenario()"
+            }
+          }
+        ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 1588407255,
+              "duration": 1474643947,
               "status": "passed"
             },
-            "line": 5,
+            "line": 12,
             "name": "The user is on the google search page",
             "match": {
               "location": "Search.theUserIsOnTheGoogleSearchPage()"
@@ -35,59 +46,175 @@
           },
           {
             "result": {
-              "duration": 87667370,
+              "duration": 2354815125,
               "status": "passed"
             },
-            "line": 6,
-            "name": "the user enters bears into the search edit",
+            "line": 13,
+            "name": "the user enters the searchvalue Bears into the search edit",
             "match": {
-              "location": "Search.theUserEntersBearsIntoTheSearchEdit()"
+              "arguments": [
+                {
+                  "val": "Bears",
+                  "offset": 32
+                }
+              ],
+              "location": "Search.theUserEntersTheSearchvalueSearchvalueIntoTheSearchEdit(String)"
             },
+            "matchedColumns": [
+              0
+            ],
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 3226254947,
+              "duration": 1200537295,
               "status": "passed"
             },
-            "line": 7,
-            "name": "the user click the search google button",
+            "line": 14,
+            "name": "the user presses Enter button",
             "match": {
-              "location": "Search.theUserClickTheSearchGoogleButton()"
+              "location": "Search.theUserPressesEnterButton()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 40946878,
+              "duration": 45061882,
               "status": "passed"
             },
-            "line": 8,
-            "name": "search results list bears",
+            "line": 15,
+            "name": "search results list the www.chicagobears.com",
             "match": {
-              "location": "Search.searchResultsListBears()"
+              "arguments": [
+                {
+                  "val": "www.chicagobears.com",
+                  "offset": 24
+                }
+              ],
+              "location": "Search.searchResultsListTheSearchresults(String)"
             },
+            "matchedColumns": [
+              1
+            ],
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "line": 3,
+            "line": 10,
+            "name": "@smoke"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1462992702,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Search.beforeScenario()"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "Search for values",
+        "description": "",
+        "id": "google-search;search-for-values;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 133031820,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Search.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1236872670,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "The user is on the google search page",
+            "match": {
+              "location": "Search.theUserIsOnTheGoogleSearchPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1621540269,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user enters the searchvalue Polar Bears into the search edit",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Polar Bears",
+                  "offset": 32
+                }
+              ],
+              "location": "Search.theUserEntersTheSearchvalueSearchvalueIntoTheSearchEdit(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1105394589,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user presses Enter button",
+            "match": {
+              "location": "Search.theUserPressesEnterButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 85019623,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "search results list the https://en.wikipedia.org/wiki/Polar_bear",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://en.wikipedia.org/wiki/Polar_bear",
+                  "offset": 24
+                }
+              ],
+              "location": "Search.searchResultsListTheSearchresults(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 10,
             "name": "@smoke"
           }
         ]
       }
     ],
     "name": "Google Search",
-    "description": "",
+    "description": "\nAs a User I want to search for things so that I can find out more information about things.\n\nRules:\n- Google should resturn as many known results as possible.\n- Google Cannot search inless a search parameter is entered.",
     "id": "google-search",
     "keyword": "Feature",
-    "uri": "Search.feature",
-    "tags": [
-      {
-        "line": 1,
-        "name": "@CucumberOptions(features\u003d\"src/test/resources\")"
-      }
-    ]
+    "uri": "Com/Search.feature"
   }
 ]

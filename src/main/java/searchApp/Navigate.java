@@ -2,10 +2,11 @@ package searchApp;
 
 import context.ContextUtil;
 import org.openqa.selenium.By;
+import utilities.AppConstants;
 
 public class Navigate {
     public void Google(){
-        ContextUtil.get().getWebDriverInstance().navigate().to("http://www.google.com");
+        ContextUtil.get().getWebDriverInstance().navigate().to(AppConstants.GOOGLEHOME);
     }
     public void All(){
         ContextUtil.get().getWebDriverInstance().findElement(By.linkText("AllPage")).click();
